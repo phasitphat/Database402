@@ -13,13 +13,13 @@ from django.contrib.auth.models import User
 
 class Customer(models.Model):
     # user = models.ForeignKey(User,default='3', on_delete=models.CASCADE )
-    username = models.CharField(max_length=20, blank=True, null=True)
-    password = models.CharField(max_length=200, blank=True, null=True)
-    first_name = models.CharField(max_length=50, blank=True, null=True)
-    last_name = models.CharField(max_length=50, blank=True, null=True)
+    username = models.CharField(max_length=20)
+    password = models.CharField(max_length=200)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     gender= models.CharField(max_length=50, blank=True, null=True)
     age = models.CharField(max_length=3, blank=True, null=True)
-    tel = models.CharField(max_length=10, blank=True, null=True)
+    tel = models.CharField(max_length=20, blank=True, null=True)
     typeofphone=models.CharField(max_length=20, blank=True, null=True)
     email = models.CharField(max_length=50, blank=True, null=True)
     jobs =models.CharField(max_length=50, blank=True, null=True)
